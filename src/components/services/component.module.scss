@@ -1,0 +1,86 @@
+@import '../../styles/base/variables';
+
+.Section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  border-radius: 15px;
+
+  .TitleSection {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 34px;
+    font-weight: 700;
+  }
+
+  .Container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 400px), 1fr));
+    gap: 20px;
+
+    .Card {
+      border-radius: 15px;
+      transition: 0.3s;
+      overflow: hidden;
+
+      .Content {
+        padding: 15px 25px;
+        opacity: 0;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        transition: 0.3s;
+        backdrop-filter: blur(5px);
+
+        .Title {
+          display: block;
+          color: $color-white;
+          text-transform: uppercase;
+          font-weight: 600;
+          font-size: 18px;
+          margin-bottom: 10px;
+        }
+
+        .Text {
+          color: $color-white;
+          font-weight: 400;
+          font-size: 14px;
+          margin-bottom: 30px;
+        }
+
+        .Tag {
+          display: inline-block;
+          border-radius: 15px;
+          padding: 5px 15px;
+          font-weight: 500;
+          color: $color-white;
+          background-color: #4338ca;
+        }
+      }
+
+      &:hover {
+        .Content {
+          opacity: 1;
+        }
+      }
+    }
+
+    .Service {
+      min-height: 400px;
+
+      background: url('../../assets/srcvp.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .Travel {
+      min-height: 400px;
+
+      background: url('../../assets/travel.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+}

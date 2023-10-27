@@ -1,0 +1,76 @@
+@import '../../styles/base/variables';
+
+.Header {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 15px 25px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+
+  @media (min-width: 900px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .List {
+    display: none;
+
+    @media (min-width: 900px) {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+    }
+
+    .Element {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 2px;
+
+      .Link {
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+
+      .Icon {
+        font-size: 20px;
+        transition: 0.2s;
+      }
+
+      &:hover {
+        .Icon {
+          transform: translateX(2px) translateY(-2px);
+        }
+      }
+    }
+  }
+
+  .TitleName {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+
+    font-size: 16px;
+    // font-weight: 600;
+    text-transform: uppercase;
+    line-height: 1;
+    font-family: $font-gugi;
+
+    @media (min-width: 900px) {
+      flex-direction: column;
+      gap: 0;
+      align-items: center;
+    }
+  }
+
+  .MenuIcon {
+    display: block;
+    justify-self: flex-end;
+    cursor: pointer;
+
+    @media (min-width: 900px) {
+      display: none;
+    }
+  }
+}

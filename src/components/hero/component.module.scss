@@ -1,0 +1,117 @@
+@import '../../styles/base/variables';
+
+.Section {
+  background-color: rgb(147, 240, 235);
+  width: 100%;
+  max-width: 1200px;
+  min-height: 400px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  border-radius: 15px;
+  padding: 15px;
+  background-color: #121215;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+
+  @media (min-width: 900px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .Card {
+    border-radius: 15px;
+    padding: 10px 15px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .Content {
+      h2 {
+        color: $color-white;
+        font-weight: 500;
+        font-size: 14px;
+      }
+      p {
+        color: $color-white;
+        font-weight: 600;
+        font-size: 20px;
+      }
+    }
+  }
+
+  .Web {
+    min-height: 400px;
+
+    background: url('../../assets/website-a.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    box-shadow: rgba(30, 27, 75, 0.8) 0px -150px 36px -28px inset;
+    justify-content: flex-end;
+    transition: 0.3s;
+
+    &:hover {
+      background: url('../../assets/website-b.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .Profile {
+    align-items: center;
+    gap: 20px;
+
+    grid-row: 1/2;
+
+    @media (min-width: 900px) {
+      grid-column: 2/3;
+    }
+
+    .ImageProfile {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background: url('../../assets/profile.jpeg');
+
+      background-size: contain;
+      background-position: center;
+    }
+
+    .Name {
+      font-size: 24px;
+      font-weight: 600;
+      color: $color-slate-300;
+      text-align: center;
+    }
+
+    .Text {
+      font-size: 44px;
+      font-weight: 600;
+      color: $color-white;
+      text-align: center;
+    }
+  }
+
+  .Mobile {
+    min-height: 400px;
+    background: url('../../assets/phone-a.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    box-shadow: rgba(67, 20, 7, 0.8) 0px -150px 36px -28px inset;
+    justify-content: flex-end;
+    transition: 0.3s;
+
+    &:hover {
+      background: url('../../assets/phone-b.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+}

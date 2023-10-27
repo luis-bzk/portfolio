@@ -1,0 +1,78 @@
+@import '../../styles/base/variables';
+
+.Section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  border-radius: 15px;
+
+  .TitleSection {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 34px;
+    font-weight: 700;
+  }
+
+  .Container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 400px), 1fr));
+    gap: 20px;
+
+    .Card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 25px 35px;
+      border-radius: 15px;
+      box-shadow: rgba(0, 0, 0, 0.09) 0px 0px 0px 1px;
+
+      @media (min-width: 600px) {
+        flex-direction: row;
+        gap: 35px;
+      }
+
+      .Percentage {
+        font-size: 50px;
+        font-weight: 700;
+      }
+
+      .Content {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-items: flex-start;
+        gap: 10px;
+
+        .Icon {
+          font-size: 30px;
+
+          &.Study {
+            color: #2563eb;
+          }
+          &.Design {
+            color: #4f46e5;
+          }
+          &.Web {
+            color: #16a34a;
+          }
+          &.Mobile {
+            color: #e11d48;
+          }
+          &.Management {
+            color: #ea580c;
+          }
+        }
+
+        .Title {
+          text-transform: uppercase;
+          font-weight: 600;
+        }
+
+        .Text {
+          color: $color-slate-800;
+        }
+      }
+    }
+  }
+}

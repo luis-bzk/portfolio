@@ -1,0 +1,113 @@
+.Navbar {
+  display: none;
+
+  @media (min-width: 900px) {
+    display: block;
+    justify-self: flex-end;
+  }
+
+  .CloseMenu {
+    display: block;
+    justify-self: flex-end;
+
+    @media (min-width: 900px) {
+      display: none;
+    }
+  }
+
+  .List {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 900px) {
+      flex-direction: row;
+      gap: 20px;
+    }
+
+    .Element {
+      .Link {
+        font-weight: 600;
+        text-transform: uppercase;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .ListSocialLinks {
+    display: block;
+    justify-self: flex-end;
+
+    @media (min-width: 900px) {
+      display: none;
+    }
+  }
+}
+
+.Open {
+  @media (max-width: 900px) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    max-width: 300px;
+    padding: 15px 25px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #fff;
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
+
+    animation-name: SHOW_MENU;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+
+    .CloseMenu {
+      align-self: flex-end;
+      cursor: pointer;
+    }
+
+    .List {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .ListSocialLinks {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      .Element {
+        .Link {
+          font-weight: 600;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}
+
+@keyframes SHOW_MENU {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes CLOSE_MENU {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
