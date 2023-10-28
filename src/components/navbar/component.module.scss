@@ -48,7 +48,7 @@
 
 .Open {
   @media (max-width: 900px) {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     height: 100vh;
@@ -60,7 +60,7 @@
     flex-direction: column;
     gap: 20px;
     background-color: #fff;
-    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
+    box-shadow: -15px 0 20px rgba(0, 0, 0, 0.1);
 
     animation-name: SHOW_MENU;
     animation-duration: 0.3s;
